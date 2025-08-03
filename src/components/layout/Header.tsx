@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { Code, User } from "lucide-react";
 import { Button } from "../ui/button";
@@ -18,8 +18,8 @@ export const Logo = () => {
 };
 
 import { useAuthContext } from "@/app/provider";
-import Authentication from "@/app/_components/Authentication";
-import ProfileAvatar from "@/app/_components/ProfileAvatar";
+import Authentication from "@/app/_navComponents/Authentication";
+import ProfileAvatar from "@/app/_navComponents/profileAvatar";
 
 export default function Header() {
   const { user } = useAuthContext();
