@@ -19,6 +19,7 @@ export const Logo = () => {
 
 import { useAuthContext } from "@/app/provider";
 import Authentication from "@/app/_components/Authentication";
+import ProfileAvatar from "@/app/_components/ProfileAvatar";
 
 export default function Header() {
   const { user } = useAuthContext();
@@ -36,7 +37,7 @@ export default function Header() {
               <User className="size-6" />
               <div>Login</div>
             </Button>
-          </Authentication> : <div>Welcome back, {user?.email}!</div>
+          </Authentication> : <ProfileAvatar />
           }
         </div>
       </Container>

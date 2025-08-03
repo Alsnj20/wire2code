@@ -18,6 +18,7 @@ export const useAuthContext = (): AuthContextType => {
 };
 
 export default function AuthProvider({ children }: { children: React.ReactNode }) {
+  console.log("AuthProvider rendered");
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {

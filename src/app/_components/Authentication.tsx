@@ -7,7 +7,7 @@ export default function Authentication({ children }: any) {
   const provider = new GoogleAuthProvider();
   console.log("Authentication component rendered: ", provider);
 
-  const handleAuth = () => {
+  const handleSignIn = () => {
     // Select your account
     signInWithPopup(auth, provider)
       .then((result) => {
@@ -32,7 +32,7 @@ export default function Authentication({ children }: any) {
   };
   return (
     <div>
-      <div onClick={handleAuth}>
+      <div onClick={handleSignIn}>
         {children}
       </div>
     </div>
